@@ -6,6 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 public abstract class GameMap {
     Canvas canvas;
     String name;
+    String name2;
     GraphicsContext gc;
     GameMap(){
         canvas = new Canvas(600, 600);
