@@ -1,19 +1,24 @@
 package com.example.kidprogramgame.Gxx;
 
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 
 public abstract class GameMap {
-    static final String imageRes = "file:src/main/resources/com/example/kidprogramgame/image/";
-    Canvas canvas;
-    GraphicsContext gc;
-    int width = 640;
-    int height = 640;
-    GameMap(){
-        canvas = new Canvas(width, height);
-        gc = canvas.getGraphicsContext2D();
+
+    private Canvas canvas;
+
+    private int[][] mapInform;
+
+    public GameMap(){
+        canvas = new Canvas(Constant.mapWidth, Constant.mapHeight);
+        mapInform = new int[Constant.blockNum][Constant.blockNum];
     }
 
-    public abstract Canvas getMapCanvas();
-    public abstract void down() throws InterruptedException;
+    public Canvas getMapCanvas(){
+        return canvas;
+    }
+    public abstract void initMapInform();
+
+    public int[][] getMapInform() {
+        return mapInform;
+    }
 }
