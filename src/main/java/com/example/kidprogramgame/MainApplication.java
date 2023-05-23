@@ -20,7 +20,6 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("Main.fxml"));
 
-
         BorderPane pane = fxmlLoader.load();
         Scene scene = new Scene(pane, 700,700);
         stage.setTitle("试一试!");

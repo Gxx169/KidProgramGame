@@ -9,8 +9,6 @@ public class Role extends ImageView implements Action{
     int x;
     int y;
 
-
-
     Role(){
         this.setImage(new Image(Constant.imagePath+"乌龟.png",Constant.blockSize,Constant.blockSize,true,true));
     }
@@ -50,7 +48,6 @@ public class Role extends ImageView implements Action{
         transition.setDuration(Duration.millis(500));
         transition.setToX(x);
         transition.setToY(y);
-
         transition.play();
     }
 }

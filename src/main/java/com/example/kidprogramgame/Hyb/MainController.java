@@ -1,20 +1,17 @@
 package com.example.kidprogramgame.Hyb;
 
 
+import com.example.kidprogramgame.Gxx.FirstLevelBuilder;
+import com.example.kidprogramgame.Gxx.Level;
 import com.example.kidprogramgame.Gxx.TestMap;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-
 
 
 public class MainController {
-    public Pane mapContainer;
-    @FXML
-    private Label welcomeText;
+
     @FXML
     BorderPane borderPane;
     @FXML
@@ -28,22 +25,33 @@ public class MainController {
 
     private TestMap map;
     private ImageView turtle;
+    Level level;
 
     public void initialize() {
-        map = new TestMap();
-        turtle = map.getTurtle();
-        borderPane.setCenter(map.getStackPane());
+        //使用TestMap
+//        map = new TestMap();
+//        turtle = map.getTurtle();
+//        map.getStackPane()
+        //使用Gxx
+        FirstLevelBuilder firstLevelBuilder = new FirstLevelBuilder();
+        level = firstLevelBuilder.getLevel();
+
+        borderPane.setCenter(level.getMapPane());
     }
     public void up(){
-        map.moveTurtle(0, -1);
+       // map.moveTurtle(0, -1);
+        level.toUp();
     }
     public void down() {
-        map.moveTurtle(0, 1);
+        //map.moveTurtle(0, 1);
+        level.toDown();
     }
     public void left(){
-        map.moveTurtle(-1, 0);
+        //map.moveTurtle(-1, 0);
+        level.toLeft();
     }
     public void right(){
-        map.moveTurtle(1, 0);
+        //map.moveTurtle(1, 0);
+        level.toRight();
     }
 }

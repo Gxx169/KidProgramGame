@@ -1,34 +1,36 @@
 package com.example.kidprogramgame.Gxx;
 
+import javafx.scene.Node;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 public class Level implements Action{
     private Role role;
-    private StackPane mapPane;
+    private Pane mapPane;
     private GameMap gameMap;
 
     Level(){
-        mapPane = new StackPane();
+        mapPane = new Pane();
         mapPane.setPrefSize(Constant.mapWidth,Constant.mapHeight);
     }
     @Override
     public void toUp() {
-
+        role.toUp();
     }
 
     @Override
     public void toLeft() {
-
+        role.toLeft();
     }
 
     @Override
     public void toRight() {
-
+        role.toRight();
     }
 
     @Override
     public void toDown() {
-
+        role.toDown();
     }
     public void setGameMap(GameMap gameMap) {
         this.gameMap = gameMap;
@@ -38,11 +40,10 @@ public class Level implements Action{
         this.role = role;
     }
 
-    public void setMapPane(StackPane mapPane) {
-        this.mapPane = mapPane;
-    }
-
-    public StackPane getMapPane() {
+    public Pane getMapPane() {
         return mapPane;
+    }
+    public void load(){
+        mapPane.getChildren().addAll(gameMap.getMapCanvas(),role);
     }
 }

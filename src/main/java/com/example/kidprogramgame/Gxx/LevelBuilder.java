@@ -9,6 +9,9 @@ public abstract class LevelBuilder {
     public abstract void load();
 
     public Level getLevel() {
+        buildRole();
+        buildMap();
+        load();
         return level;
     }
 }

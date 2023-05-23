@@ -78,6 +78,9 @@ public class TestMap {
                 alert.setHeaderText(null);
                 alert.setContentText("You lose!");
                 alert.showAndWait();
+
+                reStart();
+
             } else {
 
                 // 创建TranslateTransition对象
@@ -90,14 +93,11 @@ public class TestMap {
 
                 //动画播放完毕后移动乌龟
                 transition.setOnFinished(event -> {
-                    x = newX;
-                    y = newY;
                     System.out.println("turtle.getLayoutX(): "+turtle.getLayoutX()+",turtle.getX():"+turtle.getX()+"x:"+x);
                 });
-
                 transition.play();
-
-
+                x = newX;
+                y = newY;
             }
         }
     }
@@ -108,5 +108,12 @@ public class TestMap {
 
     public ImageView getTurtle() {
         return turtle;
+    }
+
+    void reStart(){
+        turtle.setTranslateX(0);
+        turtle.setTranslateY(0);
+        x = 0;
+        y = 0;
     }
 }
