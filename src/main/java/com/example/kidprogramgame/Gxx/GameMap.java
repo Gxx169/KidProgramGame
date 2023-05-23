@@ -4,14 +4,16 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 
 public abstract class GameMap {
+    static final String imageRes = "file:src/main/resources/com/example/kidprogramgame/image/";
     Canvas canvas;
-    String name;
-    String name2;
     GraphicsContext gc;
+    int width = 640;
+    int height = 640;
     GameMap(){
-        canvas = new Canvas(600, 600);
+        canvas = new Canvas(width, height);
         gc = canvas.getGraphicsContext2D();
     }
 
     public abstract Canvas getMapCanvas();
+    public abstract void down() throws InterruptedException;
 }
