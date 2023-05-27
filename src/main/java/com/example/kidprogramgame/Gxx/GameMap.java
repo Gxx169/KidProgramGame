@@ -2,6 +2,7 @@ package com.example.kidprogramgame.Gxx;
 
 import javafx.scene.canvas.Canvas;
 
+//抽象游戏地图类
 public abstract class GameMap {
 
     private Canvas canvas;
@@ -21,4 +22,6 @@ public abstract class GameMap {
     public int[][] getMapInform() {
         return mapInform;
     }
+
+    abstract void drawMap(Painter painter);
 }

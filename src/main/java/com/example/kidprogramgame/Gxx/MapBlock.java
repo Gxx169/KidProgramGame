@@ -2,6 +2,7 @@ package com.example.kidprogramgame.Gxx;
 
 import javafx.scene.image.Image;
 
+//地图快
 public class MapBlock {
     private int height;
     private int width;

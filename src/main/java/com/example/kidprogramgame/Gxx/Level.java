@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
+//关卡类，实现了提供给游戏主体的方法
 public class Level implements Action{
     private Role role;
     private Pane mapPane;
@@ -45,5 +46,11 @@ public class Level implements Action{
     }
     public void load(){
         mapPane.getChildren().addAll(gameMap.getMapCanvas(),role);
+    }
+
+    public int check(){
+
+
+        return 0;
     }
 }

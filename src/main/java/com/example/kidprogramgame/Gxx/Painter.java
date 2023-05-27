@@ -3,6 +3,7 @@ package com.example.kidprogramgame.Gxx;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 
+//访问者，访问
 public class Painter {
 
     public void draw(Canvas canvas, int[][] mapInfo){

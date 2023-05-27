@@ -1,5 +1,6 @@
 package com.example.kidprogramgame.Gxx;
 
+//一些常量
 public class Constant {
     //地图快大小
     public static final int blockSize = 64;

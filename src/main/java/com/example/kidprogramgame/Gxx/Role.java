@@ -6,8 +6,9 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 public class Role extends ImageView implements Action{
-    int x;
-    int y;
+    //这里的x,y是地图位置下标
+    private int x;
+    private int y;
 
     Role(){
         this.setImage(new Image(Constant.imagePath+"乌龟.png",Constant.blockSize,Constant.blockSize,true,true));
@@ -49,5 +50,13 @@ public class Role extends ImageView implements Action{
         transition.setToX(x);
         transition.setToY(y);
         transition.play();
+    }
+
+    public int getMyX() {
+        return x;
+    }
+
+    public int getMyY() {
+        return y;
     }
 }
