@@ -79,8 +79,8 @@ public class TestMap {
                 alert.setContentText("You lose!");
                 alert.showAndWait();
 
-                reStart();
 
+                reStart();
             } else {
 
                 // 创建TranslateTransition对象

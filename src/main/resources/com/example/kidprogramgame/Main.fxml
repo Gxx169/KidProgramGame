@@ -19,6 +19,8 @@
             <Button fx:id="downButton" text="下" onAction="#down"/>
             <Button fx:id="leftButton" text="左" onAction="#left"/>
             <Button fx:id="rightButton" text="右" onAction="#right"/>
+            <Button fx:id="refreshButton" text="刷新" onAction="#restart"/>
+            <Button fx:id="testButton" text="测试" onAction="#useExecuteCommandTest"/>
         </HBox>
     </bottom>
 

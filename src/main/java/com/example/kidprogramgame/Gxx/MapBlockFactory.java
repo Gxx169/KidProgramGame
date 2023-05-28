@@ -25,17 +25,18 @@ public class MapBlockFactory {
             switch (i){
                 case 0:
                     mapBlock = new LandBlock();
-                    blockPool.put(i,mapBlock);
                     break;
                 case 1:
                     mapBlock = new HoleBlock();
-                    blockPool.put(i,mapBlock);
                     break;
                 case 2:
                     mapBlock = new WaterBlock();
-                    blockPool.put(i,mapBlock);
+                    break;
+                case 3:
+                    mapBlock = new HomeBlock();
                     break;
             }
+            blockPool.put(i,mapBlock);
         }
         return mapBlock;
     }

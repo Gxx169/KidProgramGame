@@ -13,8 +13,16 @@ public class Constant {
     public static final int mapHeight = 640;
     //地图宽度
     public static final int mapWidth = 640;
-
+    //地图块编号代表
     // 0 - 陆地
     // 1 - 陷阱
     // 2 - 水
+    // 3 - 家
+
+    //返回状态编号代表
+    //-1 - 越界 彻底迷路了
+    // 0 - 正常
+    // 1 - 掉进陷阱了
+    // 2 - 掉进水里了
+    // 3 - 到家了
 }
