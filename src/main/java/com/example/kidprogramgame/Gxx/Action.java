@@ -15,4 +15,6 @@ public interface Action {
 
     Pane getLevelPane();
 
+    int getScores();
+
 }

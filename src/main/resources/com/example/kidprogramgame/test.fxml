@@ -6,9 +6,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.HBox?>
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.kidprogramgame.Hyb.MainController"
+            fx:controller="com.example.kidprogramgame.Hyb.TestController"
             fx:id="borderPane">
-
     <center>
 
     </center>
@@ -23,5 +22,4 @@
             <Button fx:id="testButton" text="测试" onAction="#useExecuteCommandTest"/>
         </HBox>
     </bottom>
-
 </BorderPane>

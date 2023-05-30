@@ -18,7 +18,7 @@ import java.util.Random;
 public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("Main.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("test.fxml"));
 
         BorderPane pane = fxmlLoader.load();
         Scene scene = new Scene(pane, 700,700);

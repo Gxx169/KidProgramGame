@@ -35,6 +35,9 @@ public class MapBlockFactory {
                 case 3:
                     mapBlock = new HomeBlock();
                     break;
+                case 4:
+                    mapBlock = new StarBlock();
+                    break;
             }
             blockPool.put(i,mapBlock);
         }

@@ -10,6 +10,8 @@ public class Level implements Action{
     private Pane levelPane;
     private GameMap gameMap;
 
+    private int scores;
+
     Level(){
         levelPane = new Pane();
         levelPane.setPrefSize(Constant.mapWidth,Constant.mapHeight);
@@ -36,16 +38,26 @@ public class Level implements Action{
             //家
             case 3:
                 return 3;
+            //得分
+            case 4:
+                gameMap.getMapInform()[x][y]=0;
+                gameMap.update();
+                scores++;
+                return 0;
         }
         return 0;
     }
 
+    //刷新地图
     @Override
     public void refreshMap(){
         gameMap.refresh();
     }
+
+    //重新开始
     @Override
     public void reStart(){
+        scores = 0;
         role.back();
         refreshMap();
     }
@@ -85,4 +97,7 @@ public class Level implements Action{
         levelPane.getChildren().addAll(gameMap.getMapCanvas(),role);
     }
 
+    public int getScores() {
+        return scores;
+    }
 }

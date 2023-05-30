@@ -6,12 +6,13 @@ public class BridgeMap extends GameMap{
 
     public BridgeMap(){
         super();
-        setMin_x(2);
-        setMax_x(7);
+        setMin_x(3);
+        setMax_x(5);
         setMin_y(0);
         setMax_y(9);
         initMapInform();
     }
+    //初始化地图信息
     @Override
     public void initMapInform() {
         int[][] map = getMapInform();
@@ -22,11 +23,12 @@ public class BridgeMap extends GameMap{
                 }
                 else{
                     Random random = new Random();
-                    int p = random.nextInt(19);
+                    int p = random.nextInt(9);
                     if(p==4){
                         map[i][j] = 1;
-                    }
-                    else{
+                    } else if (p == 6) {
+                        map[i][j] = 4;
+                    } else{
                         map[i][j] = 0;
                     }
                 }

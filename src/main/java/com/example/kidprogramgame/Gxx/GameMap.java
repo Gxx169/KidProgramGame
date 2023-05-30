@@ -4,9 +4,11 @@ import javafx.scene.canvas.Canvas;
 
 //抽象游戏地图类
 public abstract class GameMap {
+
+    //可活动范围
     private int max_x,max_y,min_x,min_y;
     private Canvas canvas;
-
+    //地图信息
     private int[][] mapInform;
 
     public GameMap(){
@@ -34,6 +36,11 @@ public abstract class GameMap {
     //刷新地图
     void refresh() {
         initMapInform();
+        Painter painter = new Painter();
+        painter.draw(getMapCanvas(),getMapInform());
+    }
+    //更新地图
+    void update(){
         Painter painter = new Painter();
         painter.draw(getMapCanvas(),getMapInform());
     }

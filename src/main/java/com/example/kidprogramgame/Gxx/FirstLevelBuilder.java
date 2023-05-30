@@ -7,7 +7,7 @@ public class FirstLevelBuilder extends LevelBuilder{
     @Override
     public void buildRole() {
         System.out.println("创建Role");
-        Role r = new Role(2,9);
+        Role r = new Role(3,9);
         level.setRole(r);
     }
 
